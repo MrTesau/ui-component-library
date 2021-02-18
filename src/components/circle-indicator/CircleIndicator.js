@@ -64,8 +64,8 @@ export const CircleIndicator = ({
           >
             <Heading
               text={"Circle Name"}
-              arc={150}
-              radius={65}
+              arc={155}
+              radius={62}
               arcTransform={2.1}
             />
             <div className="svg-arrow">
