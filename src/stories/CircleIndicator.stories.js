@@ -9,5 +9,18 @@ const stories = storiesOf("App Test", module);
 
 // Function which renders the component you are building
 stories.add("App", () => {
-  return <CircleIndicator />;
+  return (
+    <CircleIndicator
+      indicatorsToShow={[
+        { state: "on" },
+        { state: "on" },
+        { state: "broken" },
+        { state: "broken" },
+        { state: "off" },
+        { state: "broken" },
+        { state: "broken" },
+        { state: "on" },
+      ]}
+    />
+  );
 });
