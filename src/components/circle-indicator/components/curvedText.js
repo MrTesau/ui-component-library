@@ -1,25 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+//import "../styles/curvedStyles.css";
 
 function Heading({ text, arc, radius, arcTransform }) {
   const characters = text.split("");
   const degree = arc / characters.length;
 
   return (
-    <p>
-      {characters.map((char, i) => (
-        <span
-          key={`heading-span-${i}`}
-          style={{
-            height: `${radius}px`,
-            transform: `rotate(${degree * i - arc / arcTransform}deg)`,
-            transformOrigin: `0 ${radius}px 0`,
-          }}
-        >
-          {char}
-        </span>
-      ))}
-    </p>
+    <div className="wrapper">
+      <h1>
+        {characters.map((char, i) => (
+          <span
+            key={`heading-span-${i}`}
+            style={{
+              height: `${radius}px`,
+              transform: `rotate(${degree * i - arc / 2}deg)`,
+              transformOrigin: `0 ${radius}px 0`,
+            }}
+          >
+            {char}
+          </span>
+        ))}
+      </h1>
+    </div>
   );
 }
 

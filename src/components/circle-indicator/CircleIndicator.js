@@ -43,6 +43,10 @@ export const CircleIndicator = ({
     [["#216f9c,#24749e,#3e87b4,#327fad,#24749e,#24749e,#226b9c"]],
   ],
   currentBackground = 0,
+  arc = 140,
+  radius = 70,
+  arcTransform = 2,
+  text = "Circle Name",
   ...restProps
 }) => {
   return (
@@ -62,12 +66,14 @@ export const CircleIndicator = ({
             bgColor={`rgba(255, 255, 255,${innerCircleOpacity})`}
             circleClass={"inner-circle-segmented"}
           >
-            <Heading
-              text={"Circle Name"}
-              arc={155}
-              radius={62}
-              arcTransform={2.1}
-            />
+            <div className="wrapper">
+              <Heading
+                text={text}
+                arc={arc}
+                radius={radius}
+                arcTransform={arcTransform}
+              />
+            </div>
             <div className="svg-arrow">
               <Arrow />
             </div>
